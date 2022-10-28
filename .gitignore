@@ -139,3 +139,4 @@ logs
 
 .qiniu_pythonsdk_hostscache.json
 
+!/.gitignore
