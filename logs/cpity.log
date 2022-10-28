@@ -1,0 +1,95 @@
+[2022-09-26 12:13:20.454555] INFO: hello world专用: you have  hello_world
+[2022-09-26 20:22:19.707702] INFO: hello world专用: you have  hello_world
+[2022-09-26 20:29:18.446882] INFO: hello world专用: you have  hello_world
+[2022-09-27 13:51:28.975519] ERROR: UserDao: Error registering user: User or email already registered
+[2022-09-27 13:52:58.485553] ERROR: UserDao: Error registering user: User or email already registered
+[2022-09-27 13:53:48.305524] ERROR: UserDao: Error registering user: User or email already registered
+[2022-09-27 13:54:07.531673] ERROR: UserDao: Error registering user: Unicode-objects must be encoded before hashing
+[2022-09-27 13:56:37.636371] ERROR: UserDao: Error registering user: User or email already registered
+[2022-09-29 17:37:56.208940] ERROR: UserDao: Add Project: 1 Failed, (builtins.TypeError) Not a boolean value: '1'
+[SQL: INSERT INTO project (name, owner, created_at, updated_at, deleted_at, create_user, update_user, private) VALUES (%(name)s, %(owner)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(create_user)s, %(update_user)s, %(private)s)]
+[parameters: [{'private': '1', 'updated_at': datetime.datetime(2022, 9, 29, 17, 37, 56, 109040), 'created_at': datetime.datetime(2022, 9, 29, 17, 37, 56, 108990), 'owner': '1', 'name': '1', 'update_user': 3, 'deleted_at': None, 'create_user': None}]]
+[2022-09-29 17:38:38.710266] ERROR: UserDao: Add Project: 1 Failed, (builtins.TypeError) Not a boolean value: ''
+[SQL: INSERT INTO project (name, owner, created_at, updated_at, deleted_at, create_user, update_user, private) VALUES (%(name)s, %(owner)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(create_user)s, %(update_user)s, %(private)s)]
+[parameters: [{'private': '', 'updated_at': datetime.datetime(2022, 9, 29, 17, 38, 38, 615465), 'created_at': datetime.datetime(2022, 9, 29, 17, 38, 38, 615445), 'owner': '1', 'name': '1', 'update_user': 3, 'deleted_at': None, 'create_user': None}]]
+[2022-09-29 17:39:32.470351] ERROR: UserDao: Add Project: LPL Failed, (builtins.TypeError) Not a boolean value: 'true'
+[SQL: INSERT INTO project (name, owner, created_at, updated_at, deleted_at, create_user, update_user, private) VALUES (%(name)s, %(owner)s, %(created_at)s, %(updated_at)s, %(deleted_at)s, %(create_user)s, %(update_user)s, %(private)s)]
+[parameters: [{'private': 'true', 'updated_at': datetime.datetime(2022, 9, 29, 17, 39, 32, 396742), 'created_at': datetime.datetime(2022, 9, 29, 17, 39, 32, 396700), 'owner': '3', 'name': 'LPL', 'update_user': 3, 'deleted_at': None, 'create_user': None}]]
+[2022-09-29 17:50:35.470091] ERROR: UserDao: Get User: 3 list of projects failed,(mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'project.description' in 'field list'
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT project.id AS project_id, project.name AS project_name, project.owner AS project_owner, project.created_at AS project_created_at, project.updated_at AS project_updated_at, project.deleted_at AS project_deleted_at, project.create_user AS project_create_user, project.update_user AS project_update_user, project.private AS project_private, project.description AS project_description 
+FROM project 
+WHERE project.deleted_at IS NULL) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2022-09-29 17:50:43.479840] ERROR: UserDao: Get User: 3 list of projects failed,(mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'project.description' in 'field list'
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT project.id AS project_id, project.name AS project_name, project.owner AS project_owner, project.created_at AS project_created_at, project.updated_at AS project_updated_at, project.deleted_at AS project_deleted_at, project.create_user AS project_create_user, project.update_user AS project_update_user, project.private AS project_private, project.description AS project_description 
+FROM project 
+WHERE project.deleted_at IS NULL) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2022-09-29 17:51:51.248441] ERROR: UserDao: Get User: 3 list of projects failed,(mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'project.description' in 'field list'
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT project.id AS project_id, project.name AS project_name, project.owner AS project_owner, project.created_at AS project_created_at, project.updated_at AS project_updated_at, project.deleted_at AS project_deleted_at, project.create_user AS project_create_user, project.update_user AS project_update_user, project.private AS project_private, project.description AS project_description 
+FROM project 
+WHERE project.deleted_at IS NULL) AS anon_1]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2022-09-30 10:31:34.713947] ERROR: UserDao: Query Project: 1 Role list failed, filter() got an unexpected keyword argument 'project_id'
+[2022-09-30 10:33:05.129243] ERROR: UserDao: Query Project: 1 Role list failed, filter() got an unexpected keyword argument 'project_id'
+[2022-09-30 13:49:05.192919] ERROR: UserDao: Failed to add project user, Entity namespace for "project_role" has no property "user_id"
+[2022-09-30 13:49:08.946920] ERROR: UserDao: Failed to add project user, Entity namespace for "project_role" has no property "user_id"
+[2022-09-30 13:49:10.955611] ERROR: UserDao: Failed to add project user, Entity namespace for "project_role" has no property "user_id"
+[2022-09-30 13:49:12.687209] ERROR: UserDao: Failed to add project user, Entity namespace for "project_role" has no property "user_id"
+[2022-09-30 13:49:14.580455] ERROR: UserDao: Failed to add project user, Entity namespace for "project_role" has no property "user_id"
+[2022-09-30 13:49:16.497750] ERROR: UserDao: Failed to add project user, Entity namespace for "project_role" has no property "user_id"
+[2022-09-30 13:50:52.833931] ERROR: UserDao: Error registering user: User or email already registered
+[2022-09-30 13:51:57.435434] ERROR: UserDao: Failed to add project user, Entity namespace for "project_role" has no property "user_id"
+[2022-09-30 13:54:08.143556] ERROR: UserDao: Failed to add project user, Entity namespace for "project_role" has no property "user_id"
+[2022-09-30 13:54:11.358248] ERROR: UserDao: Failed to add project user, Entity namespace for "project_role" has no property "user_id"
+[2022-09-30 13:54:14.568375] ERROR: UserDao: Failed to add project user, Entity namespace for "project_role" has no property "user_id"
+[2022-09-30 14:03:48.995894] ERROR: UserDao: Failed to add project user, Entity namespace for "project_role" has no property "user_id"
+[2022-09-30 14:03:50.637693] ERROR: UserDao: Failed to add project user, Entity namespace for "project_role" has no property "user_id"
+[2022-09-30 14:47:23.099554] ERROR: UserDao: Failed to add project user, Entity namespace for "project_role" has no property "user_id"
+[2022-09-30 14:51:36.605233] ERROR: UserDao: Failed to add project user, Entity namespace for "project_role" has no property "user_id"
+[2022-10-28 17:55:00.988589] ERROR: UserDao: Error registering user: User or email already registered
+[2022-10-28 22:05:24.394278] ERROR: UserDao: insert testcase failed:(mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'test_case.params' in 'field list'
+[SQL: SELECT test_case.id AS test_case_id, test_case.name AS test_case_name, test_case.request_type AS test_case_request_type, test_case.url AS test_case_url, test_case.request_method AS test_case_request_method, test_case.request_header AS test_case_request_header, test_case.params AS test_case_params, test_case.body AS test_case_body, test_case.project_id AS test_case_project_id, test_case.tag AS test_case_tag, test_case.`status` AS test_case_status, test_case.priority AS test_case_priority, test_case.catalogue AS test_case_catalogue, test_case.expected AS test_case_expected, test_case.created_at AS test_case_created_at, test_case.updated_at AS test_case_updated_at, test_case.deleted_at AS test_case_deleted_at, test_case.create_user AS test_case_create_user, test_case.update_user AS test_case_update_user 
+FROM test_case 
+WHERE test_case.name = %(name_1)s AND test_case.project_id = %(project_id_1)s AND test_case.deleted_at IS NULL 
+ LIMIT %(param_1)s]
+[parameters: {'name_1': '测试用例', 'project_id_1': 1, 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2022-10-28 22:11:12.419675] ERROR: UserDao: insert testcase failed:(mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'test_case.params' in 'field list'
+[SQL: SELECT test_case.id AS test_case_id, test_case.name AS test_case_name, test_case.request_type AS test_case_request_type, test_case.url AS test_case_url, test_case.request_method AS test_case_request_method, test_case.request_header AS test_case_request_header, test_case.params AS test_case_params, test_case.body AS test_case_body, test_case.project_id AS test_case_project_id, test_case.tag AS test_case_tag, test_case.`status` AS test_case_status, test_case.priority AS test_case_priority, test_case.catalogue AS test_case_catalogue, test_case.expected AS test_case_expected, test_case.created_at AS test_case_created_at, test_case.updated_at AS test_case_updated_at, test_case.deleted_at AS test_case_deleted_at, test_case.create_user AS test_case_create_user, test_case.update_user AS test_case_update_user 
+FROM test_case 
+WHERE test_case.name = %(name_1)s AND test_case.project_id = %(project_id_1)s AND test_case.deleted_at IS NULL 
+ LIMIT %(param_1)s]
+[parameters: {'name_1': '测试用例', 'project_id_1': 1, 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2022-10-28 22:16:36.507284] ERROR: UserDao: 用户woodlogin error: (mysql.connector.errors.OperationalError) MySQL Connection not available.
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.name AS user_name, user.password AS user_password, user.email AS user_email, user.`role` AS user_role, user.created_at AS user_created_at, user.updated_at AS user_updated_at, user.deleted_at AS user_deleted_at, user.last_login_at AS user_last_login_at 
+FROM user 
+WHERE user.username = %(username_1)s AND user.password = %(password_1)s AND user.deleted_at IS NULL 
+ LIMIT %(param_1)s]
+[parameters: [{}]]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+[2022-10-28 22:18:22.967017] ERROR: UserDao: insert testcase failed:(mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'test_case.params' in 'field list'
+[SQL: SELECT test_case.id AS test_case_id, test_case.name AS test_case_name, test_case.request_type AS test_case_request_type, test_case.url AS test_case_url, test_case.request_method AS test_case_request_method, test_case.request_header AS test_case_request_header, test_case.params AS test_case_params, test_case.body AS test_case_body, test_case.project_id AS test_case_project_id, test_case.tag AS test_case_tag, test_case.`status` AS test_case_status, test_case.priority AS test_case_priority, test_case.catalogue AS test_case_catalogue, test_case.expected AS test_case_expected, test_case.created_at AS test_case_created_at, test_case.updated_at AS test_case_updated_at, test_case.deleted_at AS test_case_deleted_at, test_case.create_user AS test_case_create_user, test_case.update_user AS test_case_update_user 
+FROM test_case 
+WHERE test_case.name = %(name_1)s AND test_case.project_id = %(project_id_1)s AND test_case.deleted_at IS NULL 
+ LIMIT %(param_1)s]
+[parameters: {'name_1': '测试用例', 'project_id_1': 1, 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2022-10-28 22:25:18.685156] ERROR: UserDao: insert testcase failed:(mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'test_case.params' in 'field list'
+[SQL: SELECT test_case.id AS test_case_id, test_case.name AS test_case_name, test_case.request_type AS test_case_request_type, test_case.url AS test_case_url, test_case.request_method AS test_case_request_method, test_case.request_header AS test_case_request_header, test_case.params AS test_case_params, test_case.body AS test_case_body, test_case.project_id AS test_case_project_id, test_case.tag AS test_case_tag, test_case.`status` AS test_case_status, test_case.priority AS test_case_priority, test_case.catalogue AS test_case_catalogue, test_case.expected AS test_case_expected, test_case.created_at AS test_case_created_at, test_case.updated_at AS test_case_updated_at, test_case.deleted_at AS test_case_deleted_at, test_case.create_user AS test_case_create_user, test_case.update_user AS test_case_update_user 
+FROM test_case 
+WHERE test_case.name = %(name_1)s AND test_case.project_id = %(project_id_1)s AND test_case.deleted_at IS NULL 
+ LIMIT %(param_1)s]
+[parameters: {'name_1': '测试用例', 'project_id_1': 3, 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+[2022-10-28 22:40:54.645472] ERROR: UserDao: insert testcase failed:(mysql.connector.errors.ProgrammingError) 1054 (42S22): Unknown column 'test_case.params' in 'field list'
+[SQL: SELECT test_case.id AS test_case_id, test_case.name AS test_case_name, test_case.request_type AS test_case_request_type, test_case.url AS test_case_url, test_case.request_method AS test_case_request_method, test_case.request_header AS test_case_request_header, test_case.params AS test_case_params, test_case.body AS test_case_body, test_case.project_id AS test_case_project_id, test_case.tag AS test_case_tag, test_case.`status` AS test_case_status, test_case.priority AS test_case_priority, test_case.catalogue AS test_case_catalogue, test_case.expected AS test_case_expected, test_case.created_at AS test_case_created_at, test_case.updated_at AS test_case_updated_at, test_case.deleted_at AS test_case_deleted_at, test_case.create_user AS test_case_create_user, test_case.update_user AS test_case_update_user 
+FROM test_case 
+WHERE test_case.name = %(name_1)s AND test_case.project_id = %(project_id_1)s AND test_case.deleted_at IS NULL 
+ LIMIT %(param_1)s]
+[parameters: {'name_1': '测试用例', 'project_id_1': 3, 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/14/f405)
