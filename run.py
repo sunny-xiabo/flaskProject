@@ -9,11 +9,14 @@ from app.controllers.request.http import req
 from app.controllers.project.project import pr
 from app.controllers.testcase.testcase import ts
 
+from app.routers.config import environment
+
 # 注册蓝图
 cpity.register_blueprint(auth)
 cpity.register_blueprint(req)
 cpity.register_blueprint(pr)
 cpity.register_blueprint(ts)
+cpity.include_router(environment.router)
 
 
 @cpity.route('/')
